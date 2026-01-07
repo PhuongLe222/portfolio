@@ -26,10 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
       >
-        <Navbar />
-        {children}
+        <Navbar className="max-h-[72px] md:max-h-screen" />
+        <main className="max-h-[calc(100%-72px)] md:max-h-screen md:pr-[5%]">
+          {children}
+        </main>
       </body>
     </html>
   );
