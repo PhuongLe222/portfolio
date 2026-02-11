@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import WelcomeScreen from "./_components/welcome";
-import { Hero } from "./_components/hero";
 import { AnimatePresence } from "framer-motion";
+import { Homepage } from "./_components/homepage";
 
 export default function HomePage() {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -14,5 +14,5 @@ export default function HomePage() {
       </AnimatePresence>
     );
   }
-  return <Hero />;
+  return <Homepage />;
 }

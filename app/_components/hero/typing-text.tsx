@@ -38,7 +38,7 @@ export const TypingText = ({
           }
         }
       },
-      isTyping ? typingSpeed : erasingSpeed
+      isTyping ? typingSpeed : erasingSpeed,
     );
     return () => clearTimeout(timeout);
   }, [
@@ -56,10 +56,10 @@ export const TypingText = ({
       data-aos="fade-up"
       data-aos-delay="1000"
     >
-      <span className="text-xl md:text-2xl bg-gradient-to-r from-foreground to-sub-text bg-clip-text text-transparent font-light">
+      <span className="text-xl md:text-2xl bg-linear-to-r from-foreground to-sub-text bg-clip-text text-transparent font-light">
         {text}
       </span>
-      <span className="w-[3px] h-6 bg-gradient-to-t from-primary to-secondary ml-1 animate-blink"></span>
+      <span className="w-0.75 h-6 bg-linear-to-t from-primary to-secondary ml-1 animate-blink"></span>
     </div>
   );
 };

@@ -23,6 +23,43 @@
 
   --accent: oklab(85.784% -0.06922 -0.04564);
   --accent-hover: hsl(192 76% 58%);
+
+  --gradient-violet: hsl(258, 90%, 66%); /* violet-600 */
+  --gradient-indigo: hsl(239, 84%, 67%); /* indigo-500 */
+  --gradient-purple: hsl(271, 91%, 65%); /* purple-600 */
+  --gradient-fuchsia: hsl(292, 91%, 73%); /* fuchsia-500 */
+  --gradient-rose: hsl(350, 89%, 60%); /* rose-500 */
+  --gradient-pink: hsl(330, 81%, 60%); /* pink-600 */
+  --gradient-blue: hsl(217, 91%, 60%); /* blue-600 */
+  --gradient-cyan: hsl(189, 94%, 43%); /* cyan-500 */
+  --gradient-teal: hsl(173, 80%, 40%); /* teal-400 */
+
+  /* ========================================
+       Overlay Colors
+       ======================================== */
+  --overlay-black: hsl(0, 0%, 0%); /* black for overlays */
+  --overlay-purple-light: hsl(271, 91%, 65%); /* purple-500 */
+  --overlay-blue-light: hsl(217, 91%, 60%); /* blue-500 */
+
+  /* ========================================
+       UI Elements
+       ======================================== */
+  --white: hsl(0, 0%, 100%);
+  --gray-900: hsl(220, 13%, 9%); /* gray-900 for cards */
+  --transparent: transparent;
+
+  /* ========================================
+       Shadow Colors
+       ======================================== */
+  --shadow-profile: hsla(250, 20%, 62%, 0.3); /* Profile image shadow */
+
+  /* ========================================
+       Stat Card Gradient Colors (Reusing Primary)
+       ======================================== */
+  --stat-gradient-1-start: var(--primary); /* #6366f1 */
+  --stat-gradient-1-end: var(--primary-muted); /* #a855f7 */
+  --stat-gradient-2-start: var(--primary-muted); /* #a855f7 */
+  --stat-gradient-2-end: var(--primary); /* #6366f1 */
 }
 
 /* ===== Dark mode ===== */
@@ -81,6 +118,66 @@
   --color-secondary: var(--secondary);
   --color-secondary-hover: var(--secondary-hover);
   --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-gradient-violet: var(--gradient-violet); /* violet-600 */
+  --color-gradient-indigo: var(--gradient-indigo); /* indigo-500 */
+  --color-gradient-purple: var(--gradient-purple); /* purple-600 */
+  --color-gradient-fuchsia: var(--gradient-fuchsia); /* fuchsia-500 */
+  --color-gradient-rose: var(--gradient-rose); /* rose-500 */
+  --color-gradient-pink: var(--gradient-pink); /* pink-600 */
+  --color-gradient-blue: var(--gradient-blue); /* blue-600 */
+  --color-gradient-cyan: var(--gradient-cyan); /* cyan-500 */
+  --color-gradient-teal: var(--gradient-teal); /* teal-400 */
+
+  /* ========================================
+       Overlay Colors
+       ======================================== */
+  --color-overlay-black: var(--overlay-black); /* black for overlays */
+  --color-overlay-purple-light: var(--overlay-purple-light); /* purple-500 */
+  --color-overlay-blue-light: var(--overlay-blue-light); /* blue-500 */
+
+  /* ========================================
+       Shadow Colors
+       ======================================== */
+  --color-shadow-profile: var(--shadow-profile); /* Profile image shadow */
+
+  /* ========================================
+       Stat Card Gradient Colors (Reusing Primary)
+       ======================================== */
+  --color-stat-gradient-1-start: var(--primary); /* #6366f1 */
+  --color-stat-gradient-1-end: var(--primary-muted); /* #a855f7 */
+  --color-stat-gradient-2-start: var(--primary-muted); /* #a855f7 */
+  --color-stat-gradient-2-end: var(--primary); /* #6366f1 */
+}
+
+@layer utilities {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes spin-slower {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+
+  .animate-spin-slower {
+    animation: spin-slower 8s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

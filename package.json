@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next",
+    "clean:build": "rm -rf .turbo && rm -rf .next",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.17.12",

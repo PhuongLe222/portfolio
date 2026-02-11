@@ -20,7 +20,7 @@ export const Computer = () => {
 
   return (
     <div
-      className="w-full max-w-[400px] cursor-pointer py-[10%] sm:py-0 lg:w-1/2 h-auto relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
+      className="w-full max-w-100 cursor-pointer py-[10%] sm:py-0 lg:w-1/2 h-auto relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       data-aos="fade-left"
@@ -28,7 +28,7 @@ export const Computer = () => {
     >
       <div className="relative w-full opacity-90">
         <div
-          className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
+          className={`absolute inset-0 bg-linear-to-r from-background/10 to-surface/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
             isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
           }`}
         ></div>
@@ -47,7 +47,7 @@ export const Computer = () => {
           }`}
         >
           <div
-            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
+            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-linear-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
               isHovering ? "scale-110" : "scale-100"
             }`}
           ></div>
