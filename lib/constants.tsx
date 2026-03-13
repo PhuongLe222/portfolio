@@ -15,7 +15,7 @@ export const SOCIAL_LINKS = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    link: "https://www.linkedin.com/in/ph%C6%B0%E1%BB%A3ng-l%C3%AA-6b5bb124b",
+    link: "https://www.linkedin.com/in/phuong-le-6b5bb124b",
   },
   {
     icon: Facebook,
