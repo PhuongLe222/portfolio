@@ -6,7 +6,7 @@ import { SectionHeader } from "./section-header";
 import Image from "next/image";
 import { statsData } from "@/lib/constants";
 import Link from "next/link";
-import { Button } from "@/components/ui";
+import { Button, CTAButton } from "@/components/ui";
 
 const ProfileImage = memo(() => (
   <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
@@ -140,10 +140,7 @@ export const About = () => {
   }, []);
 
   return (
-    <div
-      className="h-auto pb-[10%] overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10 sm:mt-0"
-      id="About"
-    >
+    <div className="px-[5%] lg:px-[10%] lg:py-[5%]" id="about">
       <SectionHeader
         title="About Me"
         description={
@@ -228,17 +225,15 @@ export const About = () => {
                   <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
                 </Button>
               </Link>
-              <Link href="#Portfolio" className="w-full lg:w-auto">
-                <Button
-                  data-aos="fade-up"
+              <div data-aos="fade-up" data-aos-duration="1000">
+                <CTAButton
                   variant="outline"
-                  size="lg"
-                  data-aos-duration="1000"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-primary/50 text-primary font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-primary/10 "
+                  href="/#work"
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 h-12 px-6 has-[>svg]:px-4 rounded-lg border border-primary/50 text-primary font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-primary/10 "
                 >
                   <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
-                </Button>
-              </Link>
+                </CTAButton>
+              </div>
             </div>
           </div>
 

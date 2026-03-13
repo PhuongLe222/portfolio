@@ -32,3 +32,9 @@ export const calculateExperience = (startDate: Date): number => {
       : 0)
   );
 };
+
+export const toSlug = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");

@@ -7,15 +7,27 @@ export const PAUSE_DURATION = 2000;
 export const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
 export const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
 export const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/PhuongLe2810" },
-  { icon: Linkedin, link: "/" },
-  { icon: Facebook, link: "https://www.facebook.com/kkimphuong22" },
+  {
+    icon: Github,
+    label: "GitHub",
+    link: "https://github.com/PhuongLe222",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/ph%C6%B0%E1%BB%A3ng-l%C3%AA-6b5bb124b",
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    link: "https://facebook.com/kkimphuong22",
+  },
 ];
 
 export const statsData = [
   {
     icon: Code,
-    value: 5,
+    value: 4,
     label: "Total Projects",
     description: "Innovative web solutions crafted",
     animation: "fade-right",
@@ -35,3 +47,18 @@ export const statsData = [
     animation: "fade-left",
   },
 ] as const;
+
+export const techStacks = [
+  { icon: "/tech/html.svg", language: "HTML" },
+  { icon: "/tech/css.svg", language: "CSS" },
+  { icon: "/tech/javascript.svg", language: "JavaScript" },
+  { icon: "/tech/reactjs.svg", language: "ReactJS" },
+  { icon: "/tech/nextjs.svg", language: "NextJS" },
+  { icon: "/tech/axios.svg", language: "Axios" },
+  { icon: "/tech/swr.svg", language: "SWR" },
+  { icon: "/tech/zustand.svg", language: "Zustand" },
+  { icon: "/tech/MUI.svg", language: "Material UI" },
+  { icon: "/tech/shadcn-ui.svg", language: "ShadCN UI" },
+  { icon: "/tech/tailwind.svg", language: "Tailwind CSS" },
+  { icon: "/tech/zod.svg", language: "Zod" },
+];

@@ -1,18 +1,12 @@
 import { Button, CTAButton } from "@/components/ui";
 import { TypingText } from "./typing-text";
 import { ExternalLink, Mail } from "lucide-react";
-import {
-  ERASING_SPEED,
-  PAUSE_DURATION,
-  SOCIAL_LINKS,
-  TYPING_SPEED,
-  WORDS,
-} from "@/lib/constants";
 import Link from "next/link";
 import { Computer } from "./computer";
-import React, { useState, useEffect, useCallback, memo } from "react";
+import React, { useEffect, memo } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 const MainTitle = () => (
   <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
@@ -103,11 +97,11 @@ const Hero = () => {
                     data-aos-delay="1400"
                   >
                     <CTAButton
-                      href="#Portfolio"
                       text="Projects"
                       icon={ExternalLink}
+                      href="/#work"
                     />
-                    <CTAButton href="#Contact" text="Contact" icon={Mail} />
+                    <CTAButton text="Contact" icon={Mail} href="/#contact" />
                   </div>
 
                   {/* Social Links */}
