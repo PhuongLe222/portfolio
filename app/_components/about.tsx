@@ -1,12 +1,13 @@
+"use client";
 import React, { useEffect, memo } from "react";
-import { FileText, Code, ArrowUpRight, Sparkles } from "lucide-react";
+import { FileText, Code, Sparkles } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { SectionHeader } from "./section-header";
 import Image from "next/image";
 import { statsData } from "@/lib/constants";
-import Link from "next/link";
 import { Button, CTAButton } from "@/components/ui";
+import { toast } from "sonner";
 
 const ProfileImage = memo(() => (
   <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
@@ -105,7 +106,6 @@ const SummaryCard = memo(
             >
               {description}
             </p>
-            <ArrowUpRight className="w-4 h-4 text-sub-text/50 group-hover:text-sub-text transition-colors" />
           </div>
         </div>
       </div>
@@ -138,6 +138,10 @@ export const About = () => {
       clearTimeout(resizeTimer);
     };
   }, []);
+
+  const handleDownloadCV = () => {
+    toast.info("Tính năng đang được phát triển. Vui lòng quay lại sau! 🚧");
+  };
 
   return (
     <div className="px-[5%] lg:px-[10%] lg:py-[5%]" id="about">
@@ -215,16 +219,15 @@ export const About = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-              <Link href="#" className="w-full lg:w-auto">
-                <Button
-                  data-aos="fade-up"
-                  data-aos-duration="800"
-                  size="lg"
-                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-linear-to-r from-primary to-primary-muted text-foreground font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl "
-                >
-                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
-                </Button>
-              </Link>
+              <Button
+                data-aos="fade-up"
+                data-aos-duration="800"
+                size="lg"
+                onClick={handleDownloadCV}
+                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-linear-to-r from-primary to-primary-muted text-foreground font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl "
+              >
+                <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+              </Button>
               <div data-aos="fade-up" data-aos-duration="1000">
                 <CTAButton
                   variant="outline"
@@ -240,13 +243,11 @@ export const About = () => {
           <ProfileImage />
         </div>
 
-        <Link href="#work-experience">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer">
-            {statsData.map((stat) => (
-              <SummaryCard key={stat.label} {...stat} />
-            ))}
-          </div>
-        </Link>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          {statsData.map((stat) => (
+            <SummaryCard key={stat.label} {...stat} />
+          ))}
+        </div>
       </div>
     </div>
   );
